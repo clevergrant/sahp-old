@@ -1,0 +1,18 @@
+.NavLink,
+.NavLink:focus,
+.NavLink:active,
+.NavLink:visited {
+	font-weight: bold;
+	color: #ccc;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	transition-duration: .5s;
+
+	margin-bottom: 2rem;
+}
+
+	.NavLink:hover {
+		color: white;
+	}

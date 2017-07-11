@@ -1,0 +1,30 @@
+.Navigation {
+	position: fixed;
+	left: -15rem;
+	top: 0;
+	width: 20rem;
+	height: 100vh;
+	background-color: rgba(0,0,0,0);
+	z-index: 800;
+
+	display: flex;
+	justify-content: space-between;
+
+	transition-duration: .5s;
+
+}
+
+.Navigation.expanded {
+	left: 0;
+	background-color: rgba(0,0,0,.9);
+}
+
+.NavContainer {
+	padding-top: 1rem;
+	list-style: none;
+
+	text-align: left;
+
+	max-width: 200px;
+	overflow: hidden;
+}

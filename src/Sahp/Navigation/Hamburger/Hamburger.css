@@ -1,0 +1,28 @@
+.Hamburger {
+	margin: 1.5rem 1.7rem;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	transition-duration: .5s;
+}
+
+	.Hamburger:hover {
+		color: white !important;
+		cursor: pointer;
+	}
+
+.HamburgerButton {
+	width: 0;
+	height: 0;
+	border: none;
+	background: transparent;
+}
+
+.HamburgerButton:hover,
+.HamburgerButton:focus,
+.HamburgerButton:active,
+.HamburgerButton:visited {
+	outline: none;
+}

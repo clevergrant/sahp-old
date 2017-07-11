@@ -1,0 +1,13 @@
+.NavItem {
+	font-weight: bold;
+	color: #ccc;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	transition-duration: .5s;
+
+	margin-bottom: 2rem;
+
+	border-bottom: solid 1px #ccc;
+}
