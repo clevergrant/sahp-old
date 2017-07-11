@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// Database Tools
+
 import Navigation from './Navigation/Navigation';
 
 import logo from './logo-spin.svg';
@@ -10,10 +12,11 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			expanded: true
+			expanded: false
 		}
 
 		this.handleHamburgerClick = this.handleHamburgerClick.bind(this);
+		this.handleFileSelect = this.handleFileSelect.bind(this);
 	}
 
 	handleHamburgerClick() {
@@ -22,6 +25,10 @@ class App extends Component {
 		}) : this.setState({
 			expanded: true
 		});
+	}
+
+	handleFileSelect() {
+		console.log("I hate this so much");
 	}
 
 	render() {
@@ -35,6 +42,7 @@ class App extends Component {
 				<p className="App-intro">
 					I'm really cool
 				</p>
+				<button onClick={this.handleFileSelect}>Click Me</button>
 			</div>
 		);
 	}

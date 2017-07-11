@@ -5,7 +5,7 @@ import Sahp from './Sahp/Sahp';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <Sahp />,
-    document.getElementById('root')
+	<Sahp />,
+	document.getElementById('root')
 );
 registerServiceWorker();
