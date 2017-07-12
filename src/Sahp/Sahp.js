@@ -6,6 +6,7 @@ import Navigation from './Navigation/Navigation';
 
 import logo from './logo-spin.svg';
 import './Sahp.css';
+import Util from './Util';
 
 class App extends Component {
 	constructor(props) {
@@ -28,7 +29,17 @@ class App extends Component {
 	}
 
 	handleFileSelect() {
-		console.log("I hate this so much");
+		const json = {
+			"key": "Test",
+			"values": [
+				{
+					"innerText": "Home",
+					"linkHref": "/"
+				}
+			]
+		};
+
+		getJSON("localhost:3001/Navigations/Secondary", response => console.log(response));
 	}
 
 	render() {
@@ -49,3 +60,26 @@ class App extends Component {
 }
 
 export default App;
+
+function getJSON(url, callback) {
+	var request = new XMLHttpRequest();
+	request.open('GET', url, true);
+
+	request.onload = function () {
+		if (request.status >= 200 && request.status < 400) {
+			// Success!
+			//var data = JSON.parse(request.responseText);
+			callback(request.responseText);
+		} else {
+			// We reached our target server, but it returned an error
+			callback(request.status + ": " + request.statusText);
+		}
+	};
+
+	request.onerror = err => {
+		// There was a connection error of some sort
+		callback(err);
+	};
+
+	request.send();
+}
